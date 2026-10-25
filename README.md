@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Build, organise and run Google dork queries.
+OIndex builds, organises, and runs Google-dork style OSINT queries from a large template library. Operators can target a domain, pick categories, supply custom or batch dorks, and either auto-search or print URLs offline. HTML-oriented reporting supports authorised open-source collection.
 
 ---
 
 ## ✨ Features
 
-- Google Dork Builder & OSINT Search — templates, batch runs and query builder
+- 100+ built-in dork templates across many categories
+- Domain substitution into templates via -d/--domain
+- Category runs, custom -q queries, and batch dork files
+- Multi-engine backend selection with result count and delay controls
+- Offline --print-urls mode with no browser or network
+- List-categories helper for template discovery
 
 ---
 
@@ -38,7 +43,10 @@ Build, organise and run Google dork queries.
 ## 🚀 Usage
 
 ```bash
-./OIndex
+./OIndex -d example.com -c files --print-urls
+./OIndex -d example.com -c exposed --num 10 --delay 2
+./OIndex -q 'site:example.com ext:log' --print-urls
+./OIndex --help
 ```
 
 ---
